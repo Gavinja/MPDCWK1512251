@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CourseworkTest</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="earthquake_list">Earthquake RSS App</string>
+    <string name="StudentIdentifier">Gavin Walter Jaap S1512251</string>
+    <string name="MainActTitle">Android Earthquake RSS Feed Application</string>
+</resources>
+    <!--Gavin Walter Jaap S1512251-->

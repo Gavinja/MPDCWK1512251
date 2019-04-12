@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <TextView
+        android:id="@+id/salutation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/earthquake_list"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/identifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/salutation"
+        android:text="@string/StudentIdentifier"
+        />
+    <Button
+        android:id="@+id/refreshButton"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:drawableTop="@drawable/ic_refresh"
+        android:layout_alignParentRight="true"/>
+
+
+    <RelativeLayout
+        android:id="@+id/filterBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/identifier"
+        >
+
+        <Button
+            android:id="@+id/setFilterLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:text="Location"
+            android:textSize="10sp"
+            />
+
+        <Button
+            android:id="@+id/setFilterDepth"
+            android:text="Depth"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="100sp"
+            android:layout_toEndOf="@+id/setFilterLocation"
+
+            />
+        <Button
+            android:id="@+id/setFilterDate"
+            android:text="Date"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="100sp"
+            android:layout_toEndOf="@+id/setFilterDepth"
+
+            />
+        <Button
+            android:id="@+id/setFilterMagnitude"
+            android:text="Magnitude"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="90sp"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/setFilterDate"
+
+            />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterBar"
+        >
+    <include
+        android:id="@+id/rvcl"
+        layout="@layout/content_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+     </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        />
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNav"
+        app.menu="@menu/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"
+        android:background="?android:attr/windowBackground"
+        />
+</RelativeLayout>
+    <!--Gavin Walter Jaap S1512251-->
